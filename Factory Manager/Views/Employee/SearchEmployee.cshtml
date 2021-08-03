@@ -1,0 +1,28 @@
+﻿@model Factory_Manager.Models.Employee
+@{
+    ViewBag.Title = "SearchEmployee";
+}
+
+<h3>Welcome To Search Results</h3> <br />
+
+<div>
+    @foreach (var item in ViewBag.searchResults)
+    {
+    <ul>
+        <li>ID: @item.ID</li>
+        <li>First Name: @item.FirstName</li>
+        <li>Last Name: @item.LastName</li>
+    </ul>
+    }
+</div>
+<div>
+    <form action="/Employee/EmployeeList" method="post">
+        
+        <input type="submit"  name="dubmit" value="Back" />
+    </form>
+    
+</div>
+
+
+
+

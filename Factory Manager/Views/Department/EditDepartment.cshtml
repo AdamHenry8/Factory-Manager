@@ -1,0 +1,20 @@
+﻿@model Factory_Manager.Models.Department
+@{
+    ViewBag.Title = "EditDepartment";
+}
+
+<h2>Edit Department</h2> <br />
+
+<form action="/Department/GetEditedDeparmentList" method="post">
+    ID: @Html.EditorFor(x => x.ID) <br />
+    Department Name: @Html.EditorFor(x => x.DepartmentName) <br />
+    Manager: @Html.EditorFor(x => x.Manager) <br />
+    <input type="submit" name="submit" value="Update" />
+</form> <br />
+
+<a href="/Login/Index">Press Here To Log Out</a> <br />
+
+<div>
+@Html.Raw(HttpContext.Current.Session["fullName"])
+</div>
+

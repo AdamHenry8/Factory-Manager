@@ -1,0 +1,13 @@
+﻿@model Factory_Manager.Models.Shift
+@{
+    ViewBag.Title = "AddShift";
+}
+
+<h2>Add Shift</h2> <br />
+<form action="/shift/GetShiftsListWithAddedShift" method="post">
+    Date: <input type="datetime" name="shiftDate"  /> <br />
+    Start Time: <input type="number" name="startTime" /><br />
+    End Time: <input type="number" name="endTime" /><br />
+    <input type="submit" name="submit" value="Add Shift" />
+</form>
+

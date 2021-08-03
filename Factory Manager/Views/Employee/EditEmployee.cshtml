@@ -1,0 +1,23 @@
+﻿@model Factory_Manager.Models.Employee
+@{
+    ViewBag.Title = "EditEmployee";
+}
+
+<h2>Edit Employee</h2> <br />
+
+<form action="/Employee/GetEditedEmployeeList" method="post">
+    ID: @Html.EditorFor(x => x.ID) <br />
+    First Name: @Html.EditorFor(x => x.FirstName) <br />
+    Last Name: @Html.EditorFor(x => x.LastName) <br />
+    Started Working in Year: @Html.EditorFor(x => x.StartWorkYear) <br />
+    Department(by department ID): @Html.EditorFor(x => x.Department)<br />
+
+    <input type="submit" name="submit" value="Update" />
+</form> <br />
+
+<a href="/Login/Index">Press Here To Log Out</a> <br />
+
+<div>
+@Html.Raw(HttpContext.Current.Session["fullName"])
+</div>
+

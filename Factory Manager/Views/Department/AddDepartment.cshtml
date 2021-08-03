@@ -1,0 +1,19 @@
+﻿@model Factory_Manager.Models.Department 
+@{
+    ViewBag.Title = "AddDepartment";
+}
+
+<h3>Fil in the form below to add a new Department</h3> <br />
+<form action="/Department/GetListWithAddedDepartment" method="post">
+    Name: <input type="text" name="DepartmentName"/> <br />
+    Manager(ID): <input type="number" name="Manager"/> <br />
+    <input type="submit" name="submit" value="Add Department" />
+</form> <br />
+
+<a href="/Login/Index">Press Here To Log Out</a> <br />
+
+<div>
+@Html.Raw(HttpContext.Current.Session["fullName"])
+</div>
+
+

@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "HomePage";
+}
+
+<h2>Welcome to the Home Page</h2>
+
+<a href="/Login/Index">Press Here To Log Out</a> <br />
+
+<div>
+@Html.Raw(HttpContext.Current.Session["fullName"])
+</div>

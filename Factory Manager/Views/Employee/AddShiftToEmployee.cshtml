@@ -1,0 +1,22 @@
+﻿@model Factory_Manager.Models.EmpoloyeeShift
+
+@{
+    ViewBag.Title = "AddShiftToEmployee";
+}
+
+<h3>Fil in the form below to add a new shift to an Employee</h3>
+<br />
+<form action="/Employee/GetListWithAddedShifts" method="post">
+
+    Employee ID:@Html.EditorFor(x => x.EmployeeID) <br />
+    Shift ID: <input type="number" name="ShiftID" /> <br />
+    <input type="submit" name="submit" value="Add Shift" />
+</form>
+<br />
+
+<a href="/Login/Index">Press Here To Log Out</a>
+<br />
+
+<div>
+    @Html.Raw(HttpContext.Current.Session["fullName"])
+</div>
